@@ -10,7 +10,7 @@ jobs:
   go:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Detect Go module
         id: mod
         run: |
@@ -20,7 +20,7 @@ jobs:
             echo "No go.mod, nothing to check."
             echo "found=false" >> "$GITHUB_OUTPUT"
           fi
-      - uses: actions/setup-go@v5
+      - uses: actions/setup-go@v7
         if: steps.mod.outputs.found == 'true'
         with:
           go-version-file: go.mod
