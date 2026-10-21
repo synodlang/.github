@@ -1,0 +1,32 @@
+name: go
+
+on:
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  go:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Detect Go module
+        id: mod
+        run: |
+          if [ -f go.mod ]; then
+            echo "found=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No go.mod, nothing to check."
+            echo "found=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-go@v5
+        if: steps.mod.outputs.found == 'true'
+        with:
+          go-version-file: go.mod
+      - name: Vet
+        if: steps.mod.outputs.found == 'true'
+        run: go vet ./...
+      - name: Test
+        if: steps.mod.outputs.found == 'true'
+        run: go test ./...

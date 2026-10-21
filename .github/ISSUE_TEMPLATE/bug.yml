@@ -1,0 +1,37 @@
+name: Bug
+description: Report something that does not work
+labels: [bug]
+body:
+  - type: dropdown
+    id: repo
+    attributes:
+      label: Where
+      options:
+        - compiler
+        - std
+        - player
+        - mac-app
+        - agent-skills
+        - site
+        - dsl (spec or docs)
+        - examples
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Output of `synod version`, or the app or commit version.
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: Steps to reproduce, with the smallest Synod source that shows it.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true

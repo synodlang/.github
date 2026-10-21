@@ -1,0 +1,30 @@
+name: Language proposal
+description: Propose a change to the Synod language
+labels: [proposal]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What can you not say, or not say clearly, today?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: The change, with a short example in canonical code.
+    validations:
+      required: true
+  - type: textarea
+    id: decisions
+    attributes:
+      label: Consistency with spec/decisions.md
+      description: Which decisions does it touch? It must not override or be an exception to any of them (except `use ... as`).
+    validations:
+      required: true
+  - type: textarea
+    id: examples
+    attributes:
+      label: Examples and tutorial
+      description: Which examples and tutorial pages would change?

@@ -1,0 +1,22 @@
+name: Example request
+description: Ask for a new example
+labels: [example]
+body:
+  - type: input
+    id: system
+    attributes:
+      label: System or protocol
+      description: For example, Viewstamped Replication or a gossip variant.
+    validations:
+      required: true
+  - type: textarea
+    id: teach
+    attributes:
+      label: What it should teach
+    validations:
+      required: true
+  - type: textarea
+    id: refs
+    attributes:
+      label: References
+      description: Papers, specs or posts to follow.
