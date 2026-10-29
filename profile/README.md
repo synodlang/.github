@@ -2,6 +2,10 @@
 
 A small, consistent language for describing distributed systems. A Synod program is simulated deterministically and animated, so you can watch a protocol run, predict what happens next, break it and compare designs.
 
+![Paxos in Synod: two proposers race, and every node ends with the same chosen value](paxos.gif)
+
+Single-decree [Paxos](https://github.com/synodlang/examples/tree/main/paxos) from the examples, drawn by the lumen look in the chalk theme. Two proposers race with values x and y. The second learns of x during its prepare phase and proposes x too, so every node chooses x. Acceptors write their promises to disk before they reply, which keeps the run safe across crashes.
+
 ## A taste of Synod
 
 This is the start of the gossip example. Nodes keep a table of what they know. A node's version combines its generation and its heartbeat, so a restarted node is believed again.
