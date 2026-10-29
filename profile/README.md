@@ -39,7 +39,9 @@ define [n: Node] Version
 
 Every line reads as pseudocode, and there is one way to write each thing. The compiler accepts only canonical form, and `synod fmt` produces it. The same program and the same seed always give the same run.
 
-Learn it at **[synodlang.github.io](https://synodlang.github.io/)**: a [tutorial](https://synodlang.github.io/docs/v0.2/tutorial/) that builds Raft from an empty file one idea at a time, with every step editable and runnable in your browser, plus the [reference](https://synodlang.github.io/docs/v0.2/reference/), a [library](https://synodlang.github.io/docs/v0.2/library/) with a runnable example for every phrase, the [examples](https://synodlang.github.io/docs/v0.2/examples/), [guides](https://synodlang.github.io/docs/v0.2/guides/) and a page for every [error](https://synodlang.github.io/docs/v0.2/errors/).
+Learn it at **[synodlang.github.io](https://synodlang.github.io/)**: a [tutorial](https://synodlang.github.io/docs/v0.3/tutorial/) that builds Raft from an empty file one idea at a time, with every step editable and runnable in your browser, plus the [reference](https://synodlang.github.io/docs/v0.3/reference/), a [library](https://synodlang.github.io/docs/v0.3/library/) with a runnable example for every phrase, the [examples](https://synodlang.github.io/docs/v0.3/examples/), [guides](https://synodlang.github.io/docs/v0.3/guides/) and a page for every [error](https://synodlang.github.io/docs/v0.3/errors/).
+
+Synod 0.3 adds themes. A look decides what to draw and a theme decides how it looks, so any look combines with any theme. The [looks](https://github.com/synodlang/looks) module has the looks lumen and doodle and the themes solarized (light and dark), terminal, sketch and chalk; the [gallery](https://synodlang.github.io/docs/v0.3/looks/gallery/) plays every pairing.
 
 ## Install
 
@@ -54,20 +56,21 @@ scoop bucket add synodlang https://github.com/synodlang/scoop-bucket
 scoop install synod
 ```
 
-Check it with `synod version`. The latest release is [compiler v0.2.7](https://github.com/synodlang/compiler/releases/tag/v0.2.7), which implements Synod 0.2. On a Mac, the [Synod app](https://github.com/synodlang/mac-app/releases) adds an editor, a live stage, Predict, Break it and Compare, and creates a new workspace in one click.
+Check it with `synod version`. The latest release is [compiler v0.3.0](https://github.com/synodlang/compiler/releases/tag/v0.3.0), which implements Synod 0.3. On a Mac, the [Synod app](https://github.com/synodlang/mac-app/releases) adds an editor, a live stage, Predict, Break it and Compare, and creates a new workspace in one click.
 
 ## Repositories
 
 | Repository | What it is | Status |
 | --- | --- | --- |
-| [dsl](https://github.com/synodlang/dsl) | The language specification, the tutorial and the implementation guides | v0.2.14 released |
-| [compiler](https://github.com/synodlang/compiler) | The `synod` command: `new`, `fmt`, `check`, `run`, `get`, `doc`, `explain`, `mcp`, and `synod.wasm` | v0.2.7 released |
-| [std](https://github.com/synodlang/std) | The standard library packages | v0.2.2 released |
-| [examples](https://github.com/synodlang/examples) | Sample programs and acceptance tests | v0.2.1 released |
-| [player](https://github.com/synodlang/player) | Canvas library that plays `scene.json` | v0.2.1 released |
-| [mac-app](https://github.com/synodlang/mac-app) | The Mac app | v0.2.3 released |
-| [agent-skills](https://github.com/synodlang/agent-skills) | Skills for coding agents (Claude Code plugin and `AGENTS.md`) | v0.2.3 released |
-| [synodlang.github.io](https://github.com/synodlang/synodlang.github.io) | The website and documentation | v0.2.0 live |
+| [dsl](https://github.com/synodlang/dsl) | The language specification, the tutorial and the implementation guides | v0.3.1 released |
+| [compiler](https://github.com/synodlang/compiler) | The `synod` command: `new`, `fmt`, `check`, `run`, `get`, `doc`, `explain`, `mcp`, and `synod.wasm` | v0.3.0 released |
+| [std](https://github.com/synodlang/std) | The standard library packages and the default theme | v0.3.0 released |
+| [examples](https://github.com/synodlang/examples) | Sample programs and acceptance tests | v0.3.0 released |
+| [looks](https://github.com/synodlang/looks) | The looks lumen and doodle and the themes solarized, terminal, sketch and chalk | v0.3.0 released |
+| [player](https://github.com/synodlang/player) | Canvas library that plays `scene.json` | v0.3.0 released |
+| [mac-app](https://github.com/synodlang/mac-app) | The Mac app | v0.3.0 released |
+| [agent-skills](https://github.com/synodlang/agent-skills) | Skills for coding agents (Claude Code plugin and `AGENTS.md`) | v0.3.0 released |
+| [synodlang.github.io](https://github.com/synodlang/synodlang.github.io) | The website and documentation | v0.3.0 live |
 | [homebrew-tap](https://github.com/synodlang/homebrew-tap) | Homebrew formula for `synod` | Updated by compiler releases |
 | [scoop-bucket](https://github.com/synodlang/scoop-bucket) | Scoop manifest for `synod` | Updated by compiler releases |
 | [.github](https://github.com/synodlang/.github) | Organization profile and shared workflows | Available |
@@ -76,7 +79,7 @@ The order of work is in the [roadmap](https://github.com/synodlang/dsl/blob/main
 
 ## Links
 
-- [The documentation](https://synodlang.github.io/docs/v0.2/): tutorial, reference, library, examples, guides and errors
+- [The documentation](https://synodlang.github.io/docs/v0.3/): tutorial, reference, library, examples, guides and errors
 - [The specification](https://github.com/synodlang/dsl), the source of truth for the language
 - [Install](https://synodlang.github.io/install/)
 - [Examples](https://github.com/synodlang/examples): TCP, gossip, Paxos, Raft, two-phase commit, consistent hashing, Cassandra, a web app and a write-ahead log
